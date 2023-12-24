@@ -98,14 +98,14 @@ The torus code is basically this one for loop.
 
 ![Henrik-Timmer's torus](torus.png)
 
-##Combining Torus and Rings
+## Combining Torus and Rings
 For the next step we simply combined one of the rings ChatGPT had created in the Simple Query along with the torus from Henrik-Timmer. Tweaking the parameters until they matched out target dimensions. 
 
 [Combine-Torus-Ring-Life-Saver.scad](Combine-Torus-Ring-Life-Saver.scad)
 
 ![Combined Torus and Ring](Combine-Torus-Ring-Life-Saver.png)
 
-##Lettering on A Life Saver 
+## Lettering on A Life Saver 
 Almost complete. The last step is to add lettering to the ring. 
 
 **You**
@@ -139,7 +139,7 @@ With a little bit of experimentation we added the text to our previous ring.
 
 ![A Life Saver.png](A-Life-Saver.png)
 
-##Future Consideration
+## Future Consideration
 
 The top of the lettering is flat. It would be better if the letters followed the curve of the torus. That can be done by creating a larger torus and taking an intersection with the letters. 
 It would also be cool to have the letters wrap around the edge of the ring. That should be simple enough with the text_on module. 
