@@ -35,3 +35,46 @@ The next step was to improve on this by providing some critiques of the simple v
 This was not really better at all, just more of the same. 
 
 ![Better Life Saver](Better-Life-Saver.png)
+
+# Image of Life Saver
+Having no real success with the current approach, we decided to try something completely different. 
+
+**You**
+*Ok. That was lame. Can we scan a picture so you can see what we mean? Or can you use a URL to view it?*
+
+**ChatGPT**
+*Yes, you can either upload a picture directly here, or provide me with a URL to view the image. If you choose to upload the picture, I can analyze it directly. If you provide a URL, I can use the browser tool to view the image from the provided link. Once I see the image, I'll have a better understanding of what you're envisioning for the lifesaver design and can offer more accurate guidance or a revised OpenSCAD script.*
+
+Providing an image of what we wanted resulted in this response.
+
+**ChatGPT**
+*Based on the image you've provided, the 3D model of a lifesaver candy would have the following characteristics:*
+
+*A toroidal shape with a smooth surface.*
+*Raised lettering across the top surface that reads "LIFE SAVERS".*
+*The letters are embossed, meaning they protrude above the main surface.*
+*The central hole is clean and round, typical of a lifesaver candy.*
+*The overall form factor appears to have a consistent thickness throughout its shape.*
+*To model this in OpenSCAD, you'll need to use a combination of 3D primitives (like cylinders and toruses) and text extrusion with careful placement and rotation to achieve the raised lettering effect. The model would also need to be designed so that the raised letters follow the curvature of the lifesaver, which can be complex and might require custom functions or modules.*
+
+**You**
+*Sure. I can install some openscad plugin. I do have some. Can we try this?*
+
+**ChatGPT**
+*Certainly, to model a lifesaver with the details as seen in the image, using an OpenSCAD plugin could be beneficial. Plugins like text_on() or write.scad can help in creating text that follows a curved surface. You would use the linear_extrude function along with the text() function to create the raised letters, and then place them on the curved surface of the torus-shaped lifesaver.*
+
+*Here’s a conceptual example of how you might begin to structure the OpenSCAD code with a plugin:*
+
+This results in the disappointing obvious code block...
+
+...
+include <text_on.scad>; // Include the plugin
+
+diameter = 100; // Diameter of the lifesaver
+thickness = 20; // Thickness of the ring
+text_height = 5; // Height of the raised text
+
+torus(r1 = diameter / 2, r2 = thickness / 2, $fn=200);
+text_on(torus, "LIFE SAVER", text_height);
+...
+
