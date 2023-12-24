@@ -6,7 +6,8 @@ This is a collaboration between Ken Evans and Bruce Jenner to see how easy it mi
 
 The shape chosen was a familiar circular shape with a hole in the middle that a string could pass through to put on a necklace, with some wording on the face. Ken likes to give these away to strangers to let them know they are all friends to him and even small acts of kindness can be a life saver to a another. 
 
-# Simple Query
+# Iterative Design with ChatGPT
+## Simple Query
 The first approach was to try a very simple query to see if ChatGPT could create the shape. 
 
 **You**
@@ -20,7 +21,7 @@ While this was impressive, it was not everything we wanted.
 
 ![Simple Query Life Saver](Simple-Query-Life-Saver.png)
 
-# Envisioning Something Better
+## Envisioning Something Better Query
 The next step was to improve on this by providing some critiques of the simple version and ask for improvements. 
 
 **You**
@@ -36,7 +37,7 @@ This was not really better at all, just more of the same.
 
 ![Better Life Saver](Better-Life-Saver.png)
 
-# Image of Life Saver
+## Image of Life Saver Query
 Having no real success with the current approach, we decided to try something completely different. 
 
 **You**
@@ -75,4 +76,25 @@ This results in the disappointing obvious code block...
 >
 >torus(r1 = diameter / 2, r2 = thickness / 2, $fn=200);
 >text_on(torus, "LIFE SAVER", text_height);
+
+## Torus Query
+The last query was not really helpful, regressing to simple pseudocode that pushed all the real work into submodules left as an exercise for the reader. After some more coaxing to provide a good module for a torus, ChatGPT identified these. 
+
+**ChatGPT**
+*You can find OpenSCAD code for a torus in the repositories by Henrik-Timmer and Sembiance on GitHub. These modules will provide you with a starting point to create a torus shape that you can then customize to add the raised lettering and other specific details for your lifesaver design. To use these modules, you would typically download the .scad file and include it in your OpenSCAD project with the include or use command.*
+
+*Here are the links to the GitHub repositories where you can access the torus modules:*
+
+*Henrik-Timmer's torus module on GitHub: openSCAD_Modules/torus.scad*
+*Sembiance's common OpenSCAD code: common/openscad/torus.scad*
+*These repositories are open-source and provide the raw .scad code which you can review and integrate into your OpenSCAD projects.*
+[Henrik-Timmer torus.scad](https://github.com/Henrik-Timmer/openSCAD_Modules/blob/main/torus.scad)
+
+The torus code is basically this one for loop.
+ 
+>   for (i = [1: fn]){
+>   rotate([90,0,360 / fn * i])translate([r1 ,0,0])cylinder(h = 2 * (r1 + r2) * 3.14 / fn,r = r2,center = true,$fn = fn);
+>       }
+
+![Henrik-Timmer's torus](torus.png)
 
