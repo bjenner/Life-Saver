@@ -135,9 +135,9 @@ Almost complete. The last step is to add lettering to the ring.
 
 With a little bit of experimentation we added the text to our previous ring. 
 
-(A Life Saver.scad)[A-Life-Saver.scad]
+[A Life Saver.scad](A-Life-Saver.scad)
 
-!(A Life Saver.png)[A-Life-Saver.png]
+![A Life Saver.png](A-Life-Saver.png)
 
 ##Future Consideration
 
