@@ -102,5 +102,48 @@ The torus code is basically this one for loop.
 For the next step we simply combined one of the rings ChatGPT had created in the Simple Query along with the torus from Henrik-Timmer. Tweaking the parameters until they matched out target dimensions. 
 
 [Combine-Torus-Ring-Life-Saver.scad](Combine-Torus-Ring-Life-Saver.scad)
+
 ![Combined Torus and Ring](Combine-Torus-Ring-Life-Saver.png)
+
+##Lettering on A Life Saver 
+Almost complete. The last step is to add lettering to the ring. 
+
+**You**
+*Here is what I have that looks really good but it is missing the lettering.* 
+
+**ChatGPT**
+*Your OpenSCAD code currently defines the basic shape of the lifesaver with an outer ring and a hole in the center. To add raised lettering, you'll need to use the text() and linear_extrude() functions. However, getting the text to curve along the ring is more complex and cannot be achieved directly in OpenSCAD without a custom module or script.*
+
+*Here’s a conceptual approach to how you might add lettering:*
+
+*Define the text as a separate module.*
+*Linearly extrude the text to the desired height of the raised letters.*
+*Use a combination of rotate() and translate() to position the text around the torus.*
+*Use difference() or union() to subtract or add the text to the torus surface.*
+...
+*You could also explore user-contributed libraries that might provide functions to map text to a curved surface. These are more advanced uses of OpenSCAD and may require additional learning and experimentation to implement successfully.*
+
+**You**
+*what is an example of a user contributed library that maps text to a curved surface*
+
+**ChatGPT**
+*From a quick search, here's what I discovered.*
+
+*There is a library called text_on_OpenSCAD available on GitHub that allows you to put customized text on 3D shapes within OpenSCAD. This library can handle various fonts, languages, scripts, and text directions, and can be applied to spheres, cylinders, cubes, and circles. You can use it by copying text_on.scad into your OpenSCAD project directory and including it in your script with the use command.*
+
+*For more details on how to use this library and for example code, you can visit the repository on GitHub: text_on_OpenSCAD.*
+
+With a little bit of experimentation we added the text to our previous ring. 
+
+(A Life Saver.scad)[A-Life-Saver.scad]
+!(A Life Saver.png)[A-Life-Saver.png]
+
+##Future Consideration
+
+The top of the lettering is flat. It would be better if the letters followed the curve of the torus. That can be done by creating a larger torus and taking an intersection with the letters. 
+It would also be cool to have the letters wrap around the edge of the ring. That should be simple enough with the text_on module. 
+Finally there is the problem of printing this shape nicely. The current shape is difficult to print because of supports required for the bottom of the torus shape. Probably a better approach would be to split the ring in two and print the top and bottom half with a flat surface on the print bed then glue them together. 
+
+
+
 
