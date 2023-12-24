@@ -67,14 +67,12 @@ Providing an image of what we wanted resulted in this response.
 
 This results in the disappointing obvious code block...
 
-...
-include <text_on.scad>; // Include the plugin
-
-diameter = 100; // Diameter of the lifesaver
-thickness = 20; // Thickness of the ring
-text_height = 5; // Height of the raised text
-
-torus(r1 = diameter / 2, r2 = thickness / 2, $fn=200);
-text_on(torus, "LIFE SAVER", text_height);
-...
+>include <text_on.scad>; // Include the plugin
+>
+>diameter = 100; // Diameter of the lifesaver
+>thickness = 20; // Thickness of the ring
+>text_height = 5; // Height of the raised text
+>
+>torus(r1 = diameter / 2, r2 = thickness / 2, $fn=200);
+>text_on(torus, "LIFE SAVER", text_height);
 
