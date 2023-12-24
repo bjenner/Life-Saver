@@ -16,4 +16,4 @@ Creating a 3D model of a tilted lifesaver using OpenSCAD involves writing a scri
 
 While this was impressive, it was not everything we wanted.
 
-![Simple Query Life Saver](Simple-Queryr-Life-Saver.png)
+![Simple Query Life Saver](Simple-Query-Life-Saver.png)
