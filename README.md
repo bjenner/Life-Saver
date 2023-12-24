@@ -98,3 +98,9 @@ The torus code is basically this one for loop.
 
 ![Henrik-Timmer's torus](torus.png)
 
+##Combining Torus and Rings
+For the next step we simply combined one of the rings ChatGPT had created in the Simple Query along with the torus from Henrik-Timmer. Tweaking the parameters until they matched out target dimensions. 
+
+[Combine-Torus-Ring-Life-Saver.scad](Combine-Torus-Ring-Life-Saver.scad)
+![Combined Torus and Ring](Combine-Torus-Ring-Life-Saver.png)
+
